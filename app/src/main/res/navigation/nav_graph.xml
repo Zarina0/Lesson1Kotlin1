@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/nameBooksFragment">
+
+    <fragment
+        android:id="@+id/descriptionsBooksFragment"
+        android:name="com.example.lesson1kotlin1.ui.fragments.DescriptionsBooksFragment"
+        android:label="fragment_descriptions_books"
+        tools:layout="@layout/fragment_descriptions_books">
+        <argument
+            android:name="argsDescriptionsBooksFragment"
+            app:argType="string"/>
+    </fragment>
+    <fragment
+        android:id="@+id/nameBooksFragment"
+        android:name="com.example.lesson1kotlin1.ui.fragments.NameBooksFragment"
+        android:label="fragment_name_books"
+        tools:layout="@layout/fragment_name_books">
+        <action
+            android:id="@+id/action_nameBooksFragment_to_descriptionsBooksFragment"
+            app:destination="@id/descriptionsBooksFragment" />
+    </fragment>
+</navigation>
